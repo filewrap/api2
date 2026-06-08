@@ -1,0 +1,15 @@
+name = "streamify-api"
+main = "src/index.ts"
+compatibility_date = "2024-03-11"
+
+[vars]
+ENVIRONMENT = "production"
+CORS_ORIGIN = "https://music.kailashhh.com"
+
+[[kv_namespaces]]
+binding = "STREAMIFY_LIBRARY"
+id = "YOUR_CF_KV_NAMESPACE_ID"
+
+[env.production]
+name = "streamify-api-prod"
+route = "apis.kailashhh.com/*"
